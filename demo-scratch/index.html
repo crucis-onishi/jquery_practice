@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width"/>
+  <title>スクラッチ</title>
+  <link rel="Stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+  <div class="scratch-wrapper">
+    <img src="scratch2.png" id="img1">
+    <img src="scratch1.png" id="img2">
+  </div>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  <script src="jquery.eraser.js"></script>
+  <script>
+    $("#img2").eraser({size: 30});
+  </script>
+</body>
+</html>
