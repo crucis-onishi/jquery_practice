@@ -7,15 +7,31 @@
   <link rel="Stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
+  <h1>タイトル</h1>
+  <p>ここに説明文が入るよ</p>
+  <p><a href="#" onclick="reset(event);" class="box">リセット</a></p>
   <div class="scratch-wrapper">
-    <img src="scratch2.png" id="img1">
-    <img src="scratch1.png" id="img2">
+    <img src="./assets/scratch1.png" id="img2">
+    <img src="./assets/scratch2.png" id="img1">
+  </div>
+  <div class="promotion">
+  <p><a href="https://twitter.com/onishi_feuer">制作依頼はこちらまで</a></p>
   </div>
   <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
-  <script src="jquery.eraser.js"></script>
+  <script src="./assets/jquery.eraser.js"></script>
+  <script>
+    addEventListener( "load", init, false );
+    function init( event ) {
+      $("#before").eraser();
+    }
+    function reset(event) {
+      $("#before").eraser('reset');
+      event.preventDefault();
+    }
+  </script>
   <script>
     $("#img2").eraser({size: 30});
   </script>
